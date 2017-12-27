@@ -80,6 +80,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let yPosition = positionOfPlane.y
         let zPosition = positionOfPlane.z
         basketNode?.position = SCNVector3(xPosition, yPosition, zPosition)
+        basketNode?.physicsBody = SCNPhysicsBody(type: .static, shape: SCNPhysicsShape(node: basketNode!, options: [SCNPhysicsShape.Option.keepAsCompound: true, SCNPhysicsShape.Option.type: SCNPhysicsShape.ShapeType.concavePolyhedron]))
         self.sceneView.scene.rootNode.addChildNode(basketNode!)
         
     }
