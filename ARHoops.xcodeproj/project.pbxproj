@@ -12,6 +12,7 @@
 		2B2791F51FEDB83000A85414 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B2791F31FEDB83000A85414 /* Main.storyboard */; };
 		2B2791F71FEDB83000A85414 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B2791F61FEDB83000A85414 /* Assets.xcassets */; };
 		2B2791FA1FEDB83000A85414 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B2791F81FEDB83000A85414 /* LaunchScreen.storyboard */; };
+		2B2792041FF40A4E00A85414 /* Basketball.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B2792031FF40A4E00A85414 /* Basketball.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		2B2791F61FEDB83000A85414 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B2791F91FEDB83000A85414 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B2791FB1FEDB83000A85414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B2792031FF40A4E00A85414 /* Basketball.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Basketball.scnassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				2B2791F11FEDB83000A85414 /* ViewController.swift */,
 				2B2791F31FEDB83000A85414 /* Main.storyboard */,
 				2B2791F61FEDB83000A85414 /* Assets.xcassets */,
+				2B2792031FF40A4E00A85414 /* Basketball.scnassets */,
 				2B2791F81FEDB83000A85414 /* LaunchScreen.storyboard */,
 				2B2791FB1FEDB83000A85414 /* Info.plist */,
 			);
@@ -123,6 +126,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B2792041FF40A4E00A85414 /* Basketball.scnassets in Resources */,
 				2B2791FA1FEDB83000A85414 /* LaunchScreen.storyboard in Resources */,
 				2B2791F71FEDB83000A85414 /* Assets.xcassets in Resources */,
 				2B2791F51FEDB83000A85414 /* Main.storyboard in Resources */,
