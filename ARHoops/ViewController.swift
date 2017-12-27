@@ -19,6 +19,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     var basketAdded: Bool {
         return self.sceneView.scene.rootNode.childNode(withName: "Basketball", recursively: false) != nil
     }
+    var power: Float = 1.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,15 +45,18 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         if self.basketAdded {
             guard let pointOfView = self.sceneView.pointOfView else {return}
+            self.power = 10
             let transform = pointOfView.transform
             let location = SCNVector3(transform.m41, transform.m42, transform.m43)
-            let orientation = SCNVector3(-transform.m31, transform.m32, transform.m33)
+            let orientation = SCNVector3(-transform.m31, -transform.m32, -transform.m33)
             let position = location + orientation
             let ballNode = SCNNode(geometry: SCNSphere(radius: 0.3))
-            ballNode.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
+            ballNode.geometry?.firstMaterial?.diffuse.contents = #imageLiteral(resourceName: "ball")
             ballNode.position = position
+            let body = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: ballNode))
+            ballNode.physicsBody = body
+            ballNode.physicsBody?.applyForce(SCNVector3(orientation.x*power, orientation.y*power, orientation.z*power), asImpulse: true)
             self.sceneView.scene.rootNode.addChildNode(ballNode)
-            
         }
     }
     
